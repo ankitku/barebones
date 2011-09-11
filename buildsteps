@@ -1,0 +1,7 @@
+gcc -c kernel.c -o kernel.o -Wall -Wextra -nostdlib -nostartfiles -nodefaultlibs
+
+gcc -c system.c -o system.o -Wall -Wextra -nostdlib -nostartfiles -nodefaultlibs
+
+ ld -T linker.ld -o kernel.bin loader.o kernel.o system.o
+
+
